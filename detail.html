@@ -1,0 +1,97 @@
+<!-- using html and php for making detail farmer form -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            /* align at center */
+            body {text-align: center;} 
+            </style>
+            <!-- assigning title -->
+        <title>Detail Form | PHP</title>
+        <link rel="stylesheet" href="style1.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <div id="header"><img src='logo.png' alt=""></div>
+    <h2 style="text-align:center;">Agriculture Information Management System </h2>
+    <body>       
+    <div class="container">
+    <!-- assigning title for form page -->
+        <div class="title">Farmer Form </div>
+        <!-- linking to registration.php -->
+        <form action="registration.php" method="post">
+            <div class ="user-details">
+                <div class="fullname">
+                    <span class="details">Full Name</span>
+                    <input type="text" placeholder="Enter your Full name" required name="fullname"/>    
+                </div>
+                <div class="birthDate">
+                    <span class="details">Birth date</span>
+                    <input type="text" placeholder="DD/MM/YYYY" pattern="\d{2}/\d{2}/\d{4}" required name="birthDate" />
+                  </div>
+                  
+                <div class="familyCount">
+  <span class="details">Family Count</span>
+  <input type="number" placeholder="Enter your Family Count" required name="familyCount" min="1" />
+</div>
+
+<div class="contactnumber">
+    <span class="details">Contact</span>
+    <input type="tel" placeholder="Enter your contact" required name="contactnumber" pattern="[0-9]{10}" />
+  </div>
+  
+  <div class="farmingCrops">
+    <span class="details">Farming Crops</span>
+    <input type="text" placeholder="Enter Farming crops" required name="farmingCrops" pattern="[A-Za-z ]+" />
+  </div>
+  
+                <div class="productionRate">
+                    <span class="details">Production Rate</span>
+                    <input type="number"  placeholder="Enter Production Rate"  required name="productionRate" min="1" /> 
+                    <div>
+                        <select name="dropdown" id="dropdown" name="gender">
+                        <option value="Male">kg</option>
+                        <option value="gram">g</option>
+                        <option value="Female">tons</option>
+                    </select>
+                </div>
+                    <!-- <input type="text" value="kg" > -->
+   
+                </div>
+                <div class="marketRate">
+                    <span class="details">Market Rate</span>
+                    <input type="number" placeholder="Enter Market Rate" required name="marketRate" min="1"/>    
+                </div>
+                <div>
+                    <select name="dropdown" id="market" name="marketrate">
+                    <option value="rupees">Rs</option>
+                </select>
+            </div>
+                <div class="farmerRate">
+                    <span class="details">Farmer Rate</span>
+                    <input type="number" placeholder="Enter Farmer Rate"required name="farmerRate" min="1"/>    
+                </div>
+                <div>
+                    <select name="dropdown" id="Farmer" name="farmerRate">
+                    <option value="rupees">Rs</option>
+                   
+                </select>
+            </div>
+            <!-- resetting if press on cancel -->
+                <div class="button1">
+                        <input type="reset" value="Reset" name="cancel">  
+                        
+                    </div>
+                    
+                    <!-- Submitting the file if pressed at create button -->
+                    <div class="button2">
+                        <input type="submit" value="Create" name="create">    
+                    </div>
+                  
+
+            </div>
+        </form>
+        <a href="dashboard.php" class="ba"><p > < Back to dashboard page</p></a>
+    </div>
+    </body>
+</html>
